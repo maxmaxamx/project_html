@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+nav{
+    z-index: 5;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,24 +16,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-}
-
-.menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.menu ul li {
-    margin: 0 15px;
-}
-
 .menu ul li a {
     text-decoration: none;
     color: none;
@@ -37,9 +23,6 @@ body {
     display: block;
 }
 
-.menu ul li a:hover {
-    background-color: #575757;
-}
 
 section {
     padding: 100px;
@@ -47,17 +30,11 @@ section {
     text-align: center;
 }
 
-#home {
-    background: linear-gradient(0deg, #0a1f47 0%, #f0f0f0 100%);
+#product{
+    background: radial-gradient(#704343 0%, #ffffff 100%);;
 }
 
-#reviews {
-    background: linear-gradient(0deg, #77b7f3 0%, #0a1f47 100%);
-}
 
-#product {
-    background-color: #d0d0d0;
-}
 
 a{
     text-decoration: none;
@@ -116,62 +93,54 @@ li {
     border: 3px solid rgba(243, 243, 243, 0);
 }
 
-#productone{
-    width: 150px;
-    height:150px;
-    margin-top: 50px;
-    margin-left: 50px;
-    overflow: hidden;
-    border-radius: 5px;
-}
 
-#producttwo{
-    width: 150px;
-    height:150px;
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
-}
-
-#productthree{
-    width: 150px;
-    height:150px;
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
-}
-
-#l-one{
-    margin-right: 1450px;
-    display: inline-block;
-}
-#l-two,
-#l-two1 {
-    display: block; /* Делаем их блочными, чтобы они располагались один под другим */
-
-
-}
-.img-small{
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-}
 label{
     color: #1e2536;
     font-family: Arial Black;
     font-size: 20px;
 }
 
-#main-two{
-    width: 150px;
-    position: absolute;
-    bottom: 520px;
-    left: 400px;
+.sticky ul{
+    background-color: #682f2f7e;    
 }
 
-#main-three{
+/* Общий контейнер для всех продуктов */
+#products-container {
+    display: flex;
+    justify-content: space-around; /* Равномерно распределяем блоки */
+    align-items: flex-start; /* Выровняем по верху */
+    margin-top: 20px;
+}
+
+/* Стили для каждого блока продукта */
+#main-one, #main-two, #main-three {
     width: 150px;
-    position: absolute;
-    bottom: 520px;
-    left: 650px;
+    height: 250px;
+    display: flex;
+    flex-direction: column; /* Вертикальная организация элементов внутри блока */
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#main-one{
+    margin-right: 10px;
+}
+
+/* Стили для изображений продуктов */
+.img-small {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Стили для текста под продуктами */
+.product-label {
+    color: #1e2536;
+    font-family: Arial Black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
 }
