@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="basket.css">
+</head>
+<body>
+    <div id="main">
+        <ul class="menu">
+            <li><a href="project.html" id="first">Главная</a></li>
+            <li><a href="basket.html" id="fourth">Корзина</a></li>
+        </ul>
+        <div id="block">
+            <div class="shopping-cart">
+                <div class="title">Shopping Bag</div>
+
+                <div class="item" id="cart-item">
+                    <div class="buttons">
+                        <span class="delete-btn"></span>
+                        <span class="like-btn"></span>
+                    </div>
+
+                    <div class="image">
+                        <img src="" alt="" id="cart-image" />
+                    </div>
+
+                    <div class="description">
+                        <span id="cart-name"></span>
+                        <span id="cart-price"></span>
+                    </div>
+
+                    <div class="quantity">
+                        <button class="plus-btn" type="button" name="button" id="plus-btn">+</button>
+                        <input type="text" name="name" value="1" id="quantity-input">
+                        <button class="minus-btn" type="button" name="button" id="minus-btn">-</button>
+                    </div>
+
+                    <div class="total-price" id="total-price"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+    const $basketButton = $('#basket');
+
+    // Проверка, добавлен ли товар в корзину
+    if (localStorage.getItem('addedToCart')) {
+        $basketButton.addClass('added').text('В корзине');
+    }
+
+    // Обработка клика на кнопку "В корзину"
+    $basketButton.on('click', function() {
+        if (!$basketButton.hasClass('added')) {
+            $basketButton.addClass('added')
+                .text('В корзине')
+                .css({ backgroundColor: 'gray', cursor: 'not-allowed' });
+
+            // Сохранение информации о товаре в localStorage
+            const product = {
+                name: 'Air-force 1',
+                price: 100,
+                img: 'https://images.footlocker.com/is/image/FLEU/315345397202?wid=620&hei=620&fmt=png-alpha',
+                quantity: 1
+            };
+            localStorage.setItem('addedToCart', JSON.stringify(product));
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
+
