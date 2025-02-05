@@ -45,33 +45,59 @@
 
     <script>
         $(document).ready(function() {
-    const $basketButton = $('#basket');
-
-    // Проверка, добавлен ли товар в корзину
-    if (localStorage.getItem('addedToCart')) {
-        $basketButton.addClass('added').text('В корзине');
-    }
-
-    // Обработка клика на кнопку "В корзину"
-    $basketButton.on('click', function() {
-        if (!$basketButton.hasClass('added')) {
-            $basketButton.addClass('added')
-                .text('В корзине')
-                .css({ backgroundColor: 'gray', cursor: 'not-allowed' });
+            const $basketButton = $('#basket');
+            const cartItem = $('#cart-item');
+            const cartImage = $('#cart-image');
+            const cartName = $('#cart-name');
+            const cartPrice = $('#cart-price');
             
-            // Сохранение информации о товаре в localStorage
             const product = {
                 name: 'Air-force 1',
                 price: 100,
                 img: 'https://images.footlocker.com/is/image/FLEU/315345397202?wid=620&hei=620&fmt=png-alpha',
                 quantity: 1
             };
-            localStorage.setItem('addedToCart', JSON.stringify(product));
-        }
-    });
-});
-
+    
+            // Check if the product is already in the cart
+            if (localStorage.getItem('addedToCart')) {
+                $basketButton.addClass('added').text('В корзине').css({ backgroundColor: 'gray', cursor: 'default' });
+                const savedProduct = JSON.parse(localStorage.getItem('addedToCart'));
+                cartImage.attr('src', savedProduct.img);
+                cartName.text(savedProduct.name);
+                cartPrice.text(savedProduct.price + ' руб.');
+            }
+    
+            // Handle the click event on the "Add to Cart" button
+            $basketButton.on('click', function() {
+                if (!$basketButton.hasClass('added')) {
+                    $basketButton.addClass('added')
+                        .text('В корзине')
+                        .css({ backgroundColor: 'gray', cursor: 'default' });
+                    
+                    // Save product information to localStorage
+                    localStorage.setItem('addedToCart', JSON.stringify(product));
+    
+                    // Display the product information in the cart
+                    cartImage.attr('src', product.img);
+                    cartName.text(product.name);
+                    cartPrice.text(product.price + ' руб.');
+                } else {
+                    $basketButton.removeClass('added')
+                        .text('В корзину')
+                        .css({ backgroundColor: '#2d5d62', cursor: 'pointer' });
+    
+                    // Remove product information from localStorage
+                    localStorage.removeItem('addedToCart');
+    
+                    // Clear the product information from the cart
+                    cartImage.attr('src', '');
+                    cartName.text('');
+                    cartPrice.text('');
+                }
+            });
+        });
     </script>
+    
 </body>
 </html>
 

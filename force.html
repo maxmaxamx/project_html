@@ -81,31 +81,41 @@
 
     <script>
         const basketButton = document.getElementById('basket');
-
+        const addedToCartKey = 'addedToCart';
+    
         // Проверка, добавлен ли товар в корзину
-        if (localStorage.getItem('addedToCart')) {
+        if (localStorage.getItem(addedToCartKey)) {
             basketButton.classList.add('added');
             basketButton.textContent = 'В корзине';
+            basketButton.style.backgroundColor = 'gray';
+            basketButton.style.cursor = 'default'; // Set cursor to default
         }
-
+    
         basketButton.addEventListener('click', function() {
-            if (!basketButton.classList.contains('added')) {
-                // Изменяем кнопку на "В корзине"
+            if (basketButton.classList.contains('added')) {
+                // Изменяем кнопку на "В корзину" и удаляем товар из localStorage
+                basketButton.classList.remove('added');
+                basketButton.textContent = 'В корзину';
+                basketButton.style.backgroundColor = '#2d5d62';
+                basketButton.style.cursor = 'pointer'; // Set cursor back to pointer
+                localStorage.removeItem(addedToCartKey);
+            } else {
+                // Изменяем кнопку на "В корзине" и добавляем товар в localStorage
                 basketButton.classList.add('added');
                 basketButton.textContent = 'В корзине';
                 basketButton.style.backgroundColor = 'gray';
-                basketButton.style.cursor = 'not-allowed';
-
-                // Сохраняем товар в localStorage
+                basketButton.style.cursor = 'default'; // Set cursor to default
                 const product = {
                     name: 'Air-force 1',
                     price: 100,
                     img: 'https://images.footlocker.com/is/image/FLEU/315345397202?wid=620&hei=620&fmt=png-alpha',
                     quantity: 1
                 };
-                localStorage.setItem('addedToCart', JSON.stringify(product));
+                localStorage.setItem(addedToCartKey, JSON.stringify(product));
             }
         });
     </script>
+    
+    
 </body>
 </html>

@@ -4,26 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+
+    <!-- danfo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
+    <!-- Slackey Static -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+
+    <!-- Ruslan Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&family=Slackey&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="project.css">
 </head>
 <body>
     <div id="maindiv">
 
         <nav class="sticky">
+            <a href="#home" class="danfo">SNEAKERS</a>
+        <div>
         <ul>
-            <li><a href="#home" id="first">Главная</a></li>
-            <li><a href="#reviews" id="second">Отзывы</a></li>
-            <li><a href="#product" id="third">О нас</a></li>
-            <li><a href="basket.html" id="fourth">Корзина</a></li>
+            <li><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+            <li><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+            <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
         </ul>
+        </div>
         </nav>
-
-    <section id="product">
-        <h1>Главная</h1>
-    </section>
+    
 
     <section id="home">
-        <h1>Каталог</h1>
+        <h1 class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Главная</h1>
+        <div style="width: 100%; height: 100%; display: flex; align-items: center; flex-direction: row; justify-content: space-around;">
+            <div style="height: 500px; width: 300px; background-color: rgba(202, 170, 170, 0.692); border-radius: 30px;">
+                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
+                Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+            </div>
+            <div style="height: 500px; width: 300px; background-color: rgba(223, 167, 164, 0.507); border-radius: 30px;"></div>
+            <div style="height: 500px; width: 300px; background-color: aliceblue; border-radius: 30px;"></div>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <h1  class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Каталог</h1>
     
         <div id="products-container">
             <div id="main-one">
@@ -60,7 +88,7 @@
     
 
     <section id="reviews">
-        <h1>Отзывы</h1>
+        <h1 class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Отзывы</h1>
     </section>
 
     

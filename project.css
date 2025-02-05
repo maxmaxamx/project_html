@@ -16,12 +16,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.menu ul li a {
-    text-decoration: none;
-    color: none;
-    padding: 15px 20px;
-    display: block;
-}
+
 
 
 section {
@@ -30,8 +25,12 @@ section {
     text-align: center;
 }
 
-#product{
-    background: radial-gradient(#704343 0%, #ffffff 100%);;
+#home{
+    background: radial-gradient(#704343 0%, #ffffff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -45,6 +44,7 @@ a{
 
 ul {
     height: 50px;
+    margin-top: 10px;
 }
 
 li {
@@ -71,11 +71,12 @@ li {
 }
 
 .sticky {
-    background-color: rgba(255, 255, 255, 0.3); /* Полупрозрачный белый */
+    background-color:whitesmoke; /* Полупрозрачный белый */
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    opacity: 0.9; /* Прозрачность */
+    display: flex;
+    justify-content: space-around;
 }
 
 *::-webkit-scrollbar {
@@ -100,9 +101,6 @@ label{
     font-size: 20px;
 }
 
-.sticky ul{
-    background-color: #682f2f7e;    
-}
 
 /* Общий контейнер для всех продуктов */
 #products-container {
@@ -144,3 +142,33 @@ label{
     text-align: center;
     margin-top: 10px;
 }
+
+
+
+ul{
+    display: block;
+}
+
+
+.danfo {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 0;
+}
+  
+.slackey-regular {
+    font-family: "Slackey", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ruslan-display-regular {
+    font-family: "Ruslan Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
