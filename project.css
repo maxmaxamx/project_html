@@ -45,6 +45,7 @@ a{
 ul {
     height: 50px;
     margin-top: 10px;
+    display: block;
 }
 
 li {
@@ -104,15 +105,19 @@ label{
 
 /* Общий контейнер для всех продуктов */
 #products-container {
-    display: flex;
+
     justify-content: space-around; /* Равномерно распределяем блоки */
     align-items: flex-start; /* Выровняем по верху */
     margin-top: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 50px;
 }
 
 /* Стили для каждого блока продукта */
-#main-one, #main-two, #main-three {
-    width: 150px;
+.main{
+    width: 200px;
     height: 250px;
     display: flex;
     flex-direction: column; /* Вертикальная организация элементов внутри блока */
@@ -120,6 +125,16 @@ label{
     justify-content: center;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+.main:hover{
+    scale: 1.1;
+    transition: 0.5s;
 }
 
 #main-one{
@@ -143,13 +158,6 @@ label{
     margin-top: 10px;
 }
 
-
-
-ul{
-    display: block;
-}
-
-
 .danfo {
   font-family: "Danfo", serif;
   font-optical-sizing: auto;
@@ -171,4 +179,195 @@ ul{
     font-style: normal;
   }
   
-  
+#catalog{
+    background: linear-gradient(0deg, #734747 0%, #d4c6c6 99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#more{
+    padding: 0px 70px;
+    padding-top: 10px;
+    margin-top: 80px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #8e7171;
+    font-size: 45px;
+    color: #3a3030;
+    display: block;
+    width: 400px;
+    transition: 0.5s;
+}
+
+#more:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: 0.5s;
+    border: none;
+    scale: 1.2;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+p,h1:hover{
+    cursor: default;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 600px;
+    font-size: 20px;
+    cursor: pointer;
+}   
+
+.modal-content img {
+    width: 500px;
+    height: 500px;  
+
+}
+
+#products-container button{
+    background-color: white;
+}
+
+#products-container-two button{
+    background-color: white;
+}
+
+#add-to-cart{
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+#reviews{
+    background: linear-gradient(180deg, rgba(115,71,71,1) 5%, rgba(244,236,236,1) 100%);
+
+}
+
+#reviews h1{
+    font-size: 50px;
+    font-family: "Ruslan Display", sans-serif;
+    color: #3a3030;
+}
+
+.container-reviews{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-top: 100px;
+}
+
+.review{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.review img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.review p{
+    font-family: 'Arial Black';
+    font-size: 14px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+
+
+@media (max-width: 680px) {
+    section {
+        padding: 50px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    .sticky {
+        flex-direction: column;
+    }
+
+    #more {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .sec{
+        display: none;
+    }
+    p{
+        font-size: 16px;
+    }
+
+    #products-container{
+        grid-template-columns: 45% 45%;
+    }
+    .catalog{
+        height: 200vh;
+    }
+}

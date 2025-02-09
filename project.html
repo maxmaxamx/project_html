@@ -20,8 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&family=Slackey&display=swap" rel="stylesheet">
 
-
+    
     <link rel="stylesheet" href="project.css">
+    
 </head>
 <body>
     <div id="maindiv">
@@ -30,8 +31,8 @@
             <a href="#home" class="danfo">SNEAKERS</a>
         <div>
         <ul>
-            <li><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
-            <li><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+            <li class="sec"><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+            <li class="sec"><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
             <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
         </ul>
         </div>
@@ -41,58 +42,231 @@
     <section id="home">
         <h1 class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Главная</h1>
         <div style="width: 100%; height: 100%; display: flex; align-items: center; flex-direction: row; justify-content: space-around;">
-            <div style="height: 500px; width: 300px; background-color: rgba(202, 170, 170, 0.692); border-radius: 30px;">
+            <div style="height: 500px; width: 300px; background-color: rgba(202, 170, 170, 0.692); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
                 <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
                 Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
             </div>
-            <div style="height: 500px; width: 300px; background-color: rgba(223, 167, 164, 0.507); border-radius: 30px;"></div>
-            <div style="height: 500px; width: 300px; background-color: aliceblue; border-radius: 30px;"></div>
+            <div class="sec" data-aos="fade-up" style="height: 500px; width: 300px; background-color: rgba(216, 170, 168, 0.507); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
+                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
+                    Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+            </div>
+            <div class="sec" style="height: 500px; width: 300px; background-color: rgb(185, 153, 153); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
+                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
+                    Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+            </div>
         </div>
     </section>
 
-    <section id="catalog">
+    <section id="catalog" class="catalog">
         <h1  class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Каталог</h1>
     
         <div id="products-container">
-            <div id="main-one">
-                <div id="productone">
-                    <a href="force.html">
-                        <img src="https://yandex-images.clstorage.net/5BvmD1172/4d35d8GdP/prhqH9RR6x6w-286xE2heFzo6DNlW4sp3QXo-vKhAKyXTsHm0KYKPsf_zJ73YPbhQ704I_kmrP-BFUJB72FLN7O5Lx7lfONHzapzW5RtrWxUnZ0_ISrjOKls4beShQBBIpMQDiVHhpcXS3G640ju-TfcbQpYi6EuXThPIDcp9pdqyCIT9MHCOrjbFrqEFdEIROmUo0We9-wduXG683B4LeJb1E7VR1rbE98NwkskRtm-jO02oLblIsXE0xSXET4_elQmb0DdanIw044mdOlFdGBVNK85MhfsKfk5blcYWOkaP5yy0Uv2_4NzgT5v3CZdPjwBShjKFRrhWNPE633iKw6krv-YOYIK3EuyCvjheSCU3ZxXuTZTxHkR6S6vxBi5essQVo0znieXK-0Wv9TOaf7g4doE7m0i5QBLUA_VuhcaBD57kCkelowz5j4cBa1MDFXYj9kODySd-cHWIxjIZZojBI5BowZ7w_tlNneQ9lniuLUmBKKFinXE17S7uUp7stAig8ytQvLIVzo2KBm1IIRh5F_Bbh-UHXGRij9oiLH23yzOkT9Sn28rLQr__HatGrTxxvweqb4lHPMMb6GaTyrMYl8cgXK2sE8e2nAZnVCMjXQfIdIzlDU17VpDTAAhnn9Yynnz-gsz9wUWPzTqcQ408Y60Hr0iCSgjJI_lgsM6BPZ72M025mDXng50zc1YQDk0Q-W6ryitCaGqQ6hUXZbPsLaRsx57r0sF9ie0GmVieEXybD4dol2oG9TvxfpjDiAub_QVdi5M-_ZGYEURAGyBMMP5JhekfRERnmPkbPESpzTOGWdmJwNXVfp3rG713uxBwrjSqc4VRA_w133ymxYIZqeYFWaCoKtqWnAdkVxggWwX1cYvzLHpwQYPoPjxCiPc3oVX8oM3L-3Ge5jKMR4kdVZgeqWeyYT3tHOpXiuaXLKH5EG6hpiLCuL0LY0IzJnk3-kmb9itHZHqP3CM" alt="air-force high" class="img-small">
-                    </a>
+            <div class="main">
+                <div class="product-card" data-id="1">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20230721/f1213edb65e24a37b39eeeb1b3f7420f.jpg?x-oss-process=image/format,webp/resize,w_800" alt="air-force high" class="img-small">
+                    </button>
                 </div>
-                <label for="#productone" class="product-label"><b>Air-force 1</b></label>
-                <label for="#productone" class="product-label"><b>100</b></label>
+                <label for="#productone" class="product-label title"><b>Air-force 1</b></label>
+                <label for="#productone" class="product-label price"><b>100</b></label>
+                <p class="description hidden">Элегантные кроссовки для повседневной носки.</p>
             </div>
     
-            <div id="main-two">
-                <div id="producttwo">
-                    <a href="jrdn.html">
+            <div class="main">
+                <div  class="product-card" data-id="2">
+                    <button class="view-details" onclick="show(event)">
                         <img src="https://images.footlocker.com/is/image/FLEU/316702763604?wid=620&hei=620&fmt=png-alpha" alt="jordans" class="img-small">
-                    </a>
+                    </button>
                 </div>
-                <label for="#producttwo" class="product-label"><b>Air-Jordan 11</b></label>
-                <label for="#producttwo" class="product-label"><b>200</b></label>
+                <label for="#producttwo" class="product-label title"><b>Air-Jordan 11</b></label>
+                <label for="#producttwo" class="product-label price"><b>200</b></label>
+                <p class="description hidden">Спортивные кроссовки для бега.</p>
             </div>
     
-            <div id="main-three">
-                <div id="productthree">
-                    <a href="vans.html">
+            <div class="main">
+                <div  class="product-card" data-id="3">
+                    <button class="view-details" onclick="show(event)">
                         <img src="https://cdn.sneakerbaron.nl/uploads/2020/06/24160429/vans-sk8-hi-cap-black-vn0a3wm16bt.png" alt="vans" class="img-small">
-                    </a>
+                    </button>
                 </div>
-                <label for="#productthree" class="product-label"><b>Vans Sk8-Hi</b></label>
-                <label for="#productthree" class="product-label"><b>150</b></label>
+                <label for="#productthree" class="product-label title"><b>Vans Sk8-Hi</b></label>
+                <label for="#productthree" class="product-label price"><b>150</b></label>
+                <p class="description hidden">Кроссовки для скейтбординга.</p>
+            </div>
+
+
+
+            <div class="main">
+                <div  class="product-card" data-id="4">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20231106/74d09d95ce6340a4b73c84a537395002.jpg?x-oss-process=image/format,webp/resize,w_800" alt="air-force high" class="img-small">
+                    </button>
+                </div>
+                <label for="#productone" class="product-label title"><b>Air Jordan 11</b></label>
+                <label for="#productone" class="product-label price"><b>300</b></label>
+                <p class="description hidden">Баскетбольные кроссовки</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="5">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240603/5349c0f144e142e6b4f7c71047fcfc09.jpg?x-oss-process=image/format,webp/resize,w_800" alt="jordans" class="img-small">
+                    </button>
+                </div>
+                <label for="#producttwo" class="product-label title"><b>New Balance</b></label>
+                <label for="#producttwo" class="product-label price" ><b>130</b></label>
+                <p class="description hidden">Повседневные кроссовки</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="6">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240718/e72e67c253a243c4a06598ff1c6c3bc2.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Adidas originals</b></label>
+                <label for="#productthree" class="product-label price"><b>250</b></label>
+                <p class="description hidden">Фирменное качество</p>
+            </div>
+
+            <div class="main">
+                <div  class="product-card" data-id="7">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240413/8b4af5994156473aad32150547e2980c.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Puma suede xl</b></label>
+                <label for="#productthree" class="product-label price"><b>350</b></label>
+                <p class="description hidden">Фирменное качество</p>
+            </div>
+
+            <div class="main">
+                <div  class="product-card" data-id="8">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240412/692eb1db69a84a13a5f15d3155933597.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Jordan 5 retro</b></label>
+                <label for="#productthree" class="product-label price"><b>325</b></label>
+                <p class="description hidden">Отличные баскетбольные кроссовки</p>
+            </div>
+
+            <div id="modal" class="modal hidden">
+                <div class="modal-content"> 
+                    <button class="close">&#x2715;</button>
+                    <h2 id="modal-title">Название товара</h2>
+                    <img id="modal-image" src="" alt="Изображение товара">
+                    <p><b id="modal-price">Цена: $0</b></p>
+                    <p id="modal-description">Описание товара...</p>    
+                    <button id="add-to-cart" data-cart onclick="addToCart(event)">Добавить в корзину</button>
+                </div>
             </div>
         </div>
+        <div style="width: 100%; display: flex; justify-content: center;">
+        <a id="more" class="ruslan-display-regular">Далее</a>
+        </div>
+
     </section>
     
 
     <section id="reviews">
         <h1 class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Отзывы</h1>
+        <div class="container-reviews">
+        <div>
+            <div class="review">
+                <div class="profile">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="user" class="user-image">
+                <p class="user-name"><b>Иван Иванов</b></p>
+                </div>
+                <br>
+                <br>
+
+                <p>Купил себе Air Force 1 и не пожалел ни на секунду! Отличное качество материалов – натуральная кожа, прочная подошва и мягкая амортизация делают их невероятно удобными. Можно носить целый день, и ноги не устают.</p>
+                <br>
+                <p>✅ Плюсы: комфорт, стиль, качество, универсальность.</p>
+                <br>
+                <p>❌ Минус: легко мараются (особенно белые).</p>
+                <br>
+                <p>💯 Оценка: 10/10 – рекомендую! 😎</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="review">
+                <div class="profile">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="user" class="user-image">
+                <p class="user-name"><b>Олег Кисляк</b></p>
+                </div>
+                <br>
+                <br>
+
+                <p>Купил Puma Suede XL – и это любовь с первого шага! 😍 Мягкий замшевый верх придаёт кроссовкам премиальный вид, а плотная резиновая подошва обеспечивает отличное сцепление.</p>
+                <br>
+                <p>✅ Плюсы: удобство, стиль, качество материалов, универсальность.</p>
+                <br>
+                <p>❌ Минус: замша требует ухода.</p>
+                <br>
+                <p>💯 Оценка: 9/10 – отличные кроссовки для повседневного стиля! 🔥</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="review">
+                <div class="profile">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="user" class="user-image">
+                <p class="user-name"><b>Семен Бакин</b></p>
+                </div>
+                <br>
+                <br>
+
+                <p>Jordan 5 Retro – это не просто кроссовки, а культовая модель с богатой историей. Первое, что бросается в глаза, – агрессивный дизайн с массивной подошвой и культовыми "акульими зубами" сбоку.</p>
+                <br>
+                <p>✅ Плюсы: крутой дизайн, амортизация Air, качественные материалы, история модели.</p>
+                <br>
+                <p>❌ Минус: немного тяжеловаты, требуют ухода.</p>
+                <br>
+                <p>💯 Оценка: 9/10 – классика, которая всегда в тренде! 🔥🏀</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="review">
+                <div class="profile">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="user" class="user-image">
+                <p class="user-name"><b>Сергей Макеев</b></p>
+                </div>
+                <br>
+                <br>
+
+                <p>Купил Vans Sk8-Hi и теперь не представляю свой гардероб без них! Высокий силуэт не только стильно смотрится, но и хорошо фиксирует ногу.</p>
+                <br>
+                <p>✅ Плюсы: стильный ретро-дизайн, удобство, прочные материалы, хорошая фиксация ноги.</p>
+                <br>
+                <p>❌ Минус: замша требует ухода, не лучший вариант для дождя.</p>
+                <br>
+                <p>💯 Оценка: 9/10 – легендарные кеды, которые подходят и для скейта, и для повседневной носки! 🛹🔥</p>
+            </div>
+        </div>
+
+        </div>
+    
     </section>
 
     
-    </div>
- 
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <span class="ruslan-display-regular">Адрес: г. Москва, ул. Ленина, д. 1</span>
+                <span class="ruslan-display-regular">Телефон: +7(999)999-99-99</span>
+                <span class="ruslan-display-regular">Email: maximnovitskiy274@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="project.js"></script>
+
 </body>
 </html>

@@ -5,98 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина</title>
     <link rel="stylesheet" href="basket.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
+    <!-- Slackey Static -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+
+    <!-- Ruslan Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&family=Slackey&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="main">
-        <ul class="menu">
-            <li><a href="project.html" id="first">Главная</a></li>
-            <li><a href="basket.html" id="fourth">Корзина</a></li>
+        <nav class="sticky">
+            <a href="D:\project_html\project.html#home" class="danfo">SNEAKERS</a>
+        <div>
+        <ul>
+            <li><a href="D:\project_html\project.html#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+            <li><a href="D:\project_html\project.html#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+            <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
         </ul>
+        </div>
+        </nav>
         <div id="block">
             <div class="shopping-cart">
                 <div class="title">Shopping Bag</div>
 
-                <div class="item" id="cart-item">
-                    <div class="buttons">
-                        <span class="delete-btn"></span>
-                        <span class="like-btn"></span>
-                    </div>
+                <p>Здесь пока ничего нету</p>
 
-                    <div class="image">
-                        <img src="" alt="" id="cart-image" />
-                    </div>
-
-                    <div class="description">
-                        <span id="cart-name"></span>
-                        <span id="cart-price"></span>
-                    </div>
-
-                    <div class="quantity">
-                        <button class="plus-btn" type="button" name="button" id="plus-btn">+</button>
-                        <input type="text" name="name" value="1" id="quantity-input">
-                        <button class="minus-btn" type="button" name="button" id="minus-btn">-</button>
-                    </div>
-
-                    <div class="total-price" id="total-price"></div>
-                </div>
+                
+            </div>
+            <div class="total-price" id="total-price">
+                <p id="total">Итого:</p>
             </div>
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            const $basketButton = $('#basket');
-            const cartItem = $('#cart-item');
-            const cartImage = $('#cart-image');
-            const cartName = $('#cart-name');
-            const cartPrice = $('#cart-price');
-            
-            const product = {
-                name: 'Air-force 1',
-                price: 100,
-                img: 'https://images.footlocker.com/is/image/FLEU/315345397202?wid=620&hei=620&fmt=png-alpha',
-                quantity: 1
-            };
-    
-            // Check if the product is already in the cart
-            if (localStorage.getItem('addedToCart')) {
-                $basketButton.addClass('added').text('В корзине').css({ backgroundColor: 'gray', cursor: 'default' });
-                const savedProduct = JSON.parse(localStorage.getItem('addedToCart'));
-                cartImage.attr('src', savedProduct.img);
-                cartName.text(savedProduct.name);
-                cartPrice.text(savedProduct.price + ' руб.');
-            }
-    
-            // Handle the click event on the "Add to Cart" button
-            $basketButton.on('click', function() {
-                if (!$basketButton.hasClass('added')) {
-                    $basketButton.addClass('added')
-                        .text('В корзине')
-                        .css({ backgroundColor: 'gray', cursor: 'default' });
-                    
-                    // Save product information to localStorage
-                    localStorage.setItem('addedToCart', JSON.stringify(product));
-    
-                    // Display the product information in the cart
-                    cartImage.attr('src', product.img);
-                    cartName.text(product.name);
-                    cartPrice.text(product.price + ' руб.');
-                } else {
-                    $basketButton.removeClass('added')
-                        .text('В корзину')
-                        .css({ backgroundColor: '#2d5d62', cursor: 'pointer' });
-    
-                    // Remove product information from localStorage
-                    localStorage.removeItem('addedToCart');
-    
-                    // Clear the product information from the cart
-                    cartImage.attr('src', '');
-                    cartName.text('');
-                    cartPrice.text('');
-                }
-            });
-        });
-    </script>
+    <!-- <script src="basket.js"></script> -->
+    <script src="project.js"></script>
     
 </body>
 </html>

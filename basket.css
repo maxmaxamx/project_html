@@ -14,37 +14,49 @@ h1 {
     display: inline-block;
 }
 
-#block {
-    width: 1000px;
-    height: 800px;
-    margin-left: 450px;
-    background-color: rgb(212, 208, 203);
-    border-radius: 10px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 15px 20px;
-    display: block;
-}
-.menu ul li a:hover {
-    background-color: #575757;
-}
-li {
-    margin-left: 500px;
-    display: inline-block;
-}
-ul {
-    list-style: none;
-}
-a {
+a{
     text-decoration: none;
     color: #333;
     font-family: Blippo, fantasy;
     font-size: 35px;
 }
 
+ul {
+    margin-top: 10px;
+    display: block;
+}
+
+li {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+#first {
+    margin-left: 380px;
+    position: sticky;
+} 
+
+#second {
+    margin-left: 200px;
+}
+
+#third {
+    margin-left: 200px;
+}
+
+#fourth{
+    margin-left: 200px;
+
+}
+
+.sticky {
+    background-color:whitesmoke; /* Полупрозрачный белый */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
 * {
     box-sizing: border-box;
 }
@@ -53,7 +65,7 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #7EC855;
+    background: radial-gradient(#8b7474 8%, #d4c6c6 100%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -64,6 +76,22 @@ html, body {
     background: #FFFFFF;
     box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#total-price{
+    width: 750px;
+    margin: 80px auto;
+    margin-top: 0;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     display: flex;
     flex-direction: column;
 }
@@ -131,6 +159,24 @@ button[class*=btn] {
     cursor: pointer;
 }
 
+#plus-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+#minus-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
 button:focus,
 input:focus {
     outline: none;
@@ -144,4 +190,27 @@ input:focus {
     margin-left: auto;
 }
 
+.slackey-regular {
+    font-family: "Slackey", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ruslan-display-regular {
+    font-family: "Ruslan Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.danfo {
+font-family: "Danfo", serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:"ELSH" 0;
+}
+  
+#cart-item{
+    display: none;
+}
 
