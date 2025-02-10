@@ -52,6 +52,7 @@ function close(){
     document.getElementById('modal').classList.add('hidden');
 }
 
+
 // Добавление в корзину
 function addToCart(productId) {
     if (!productId) {
@@ -226,3 +227,29 @@ function minus(productId) {
 }
 
 
+function showEnter() {
+    let ent = document.getElementById('enter-main');
+    if (ent) {
+        ent.classList.remove('hidden');
+    } else {
+        console.error("Error: No element with class 'enterr' found.");
+    }
+}
+
+document.getElementById('enter-button').addEventListener('click', showEnter);
+
+function closeEnter() {
+    const enterDiv = document.getElementById('enter-main');
+    if (enterDiv) {
+        enterDiv.classList.add('hidden');
+    } else {
+        console.error("Error: No element with id 'enter-main' found.");
+    }
+}
+
+document.querySelector('.close-enter').addEventListener('click', closeEnter);
+document.addEventListener('click', (event) => {
+    if(event.target === document.getElementById("enter-main")){
+        closeEnter();
+    }
+});

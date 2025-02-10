@@ -10,11 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Londrina+Sketch&display=swap" rel="stylesheet">
 
-    <!-- Slackey Static -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
-
     <!-- Ruslan Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,34 +20,32 @@
     
 </head>
 <body>
+    
     <div id="maindiv">
 
         <nav class="sticky">
             <a href="#home" class="danfo">SNEAKERS</a>
         <div>
         <ul>
+            <li class="sec"><button onclick="showEnter()" id="enter-button" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px; background-color: transparent; border: none;">Войти</button></li>
             <li class="sec"><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
             <li class="sec"><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
             <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
         </ul>
         </div>
         </nav>
-    
 
     <section id="home">
         <h1 class="ruslan-display-regular" style="color: rgb(43, 47, 51); font-size: 50px;">Главная</h1>
         <div style="width: 100%; height: 100%; display: flex; align-items: center; flex-direction: row; justify-content: space-around;">
             <div style="height: 500px; width: 300px; background-color: rgba(202, 170, 170, 0.692); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
-                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
-                Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+                <p style="padding: 30px; color: aliceblue; font-size: 24px;" class="ruslan-display-regular">👟 Добро пожаловать в SNEAKERS – ваш идеальный магазин кроссовок! Мы предлагаем стильные, удобные и качественные модели для спорта и повседневной жизни.</p>
             </div>
             <div class="sec" data-aos="fade-up" style="height: 500px; width: 300px; background-color: rgba(216, 170, 168, 0.507); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
-                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
-                    Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+                <p style="padding: 30px; color: aliceblue; font-size: 24px;" class="ruslan-display-regular">🔥 В нашем каталоге вы найдете кроссовки от ведущих брендов, которые подчеркнут ваш стиль и обеспечат комфорт на каждый день.</p>
             </div>
             <div class="sec" style="height: 500px; width: 300px; background-color: rgb(185, 153, 153); border-radius: 30px;box-shadow: 19px 19px 24px 10px #5c3b3b;">
-                <p style="padding: 30px; color: aliceblue;" class="slackey-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse natus id molestiae consequuntur! Laudantium iure voluptatum est eligendi! Voluptatem iure corporis quidem distinctio ex odio sequi laborum iste adipisci veritatis.
-                    Fuga distinctio quos perspiciatis? Nemo fuga libero et iusto ab, velit fugit obcaecati, mollitia laudantium voluptatibus vero ex, repellendus ut.</p>
+                <p style="padding: 30px; color: aliceblue; font-size: 24px;" class="ruslan-display-regular">⚡ Быстрая доставка, удобная оплата и надежное качество – делайте покупки легко и с удовольствием в <b class="danfo">SNEAKERS!</b></p>
             </div>
         </div>
     </section>
@@ -166,6 +159,7 @@
         <a id="more" class="ruslan-display-regular">Далее</a>
         </div>
 
+
     </section>
     
 
@@ -252,7 +246,17 @@
     
     </section>
 
+
+        <div id="enter-main" class="hidden modal">
+            <div class="enter">
+                <button class="close-enter">&#x2715;</button>
+                <input type="email" placeholder="Введите email">
+                <input type="password" placeholder="Введите пароль">
+                <button id="search">Войти</button>
+            </div>
+        </div>
     
+
 
 
     <footer>

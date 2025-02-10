@@ -1,0 +1,35 @@
+#mainsearch{
+    width: 430px;
+    height: 200px;
+    border:none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+body{
+    background-color: rgb(66, 66, 218);  
+    padding: 0px;
+}
+#search{
+    border-radius: 10px;
+    background-color: rgb(70, 112, 248);
+    height: 35px;
+    width: 100px;
+    border:none;
+    color: whitesmoke;
+}
+#search:hover{
+    cursor: pointer;
+}
+input{
+    border:0.5px solid gray;
+    border-radius: 10px;
+    width: 280px;
+    height: 35px;
+    font-size: 15px;
+
+}

@@ -166,12 +166,6 @@ label{
   font-variation-settings:
     "ELSH" 0;
 }
-  
-.slackey-regular {
-    font-family: "Slackey", serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
 .ruslan-display-regular {
     font-family: "Ruslan Display", sans-serif;
@@ -272,9 +266,7 @@ button:hover{
     cursor: pointer;
 }
 
-.hidden{
-    display: none;
-}
+
 
 #reviews{
     background: linear-gradient(180deg, rgba(115,71,71,1) 5%, rgba(244,236,236,1) 100%);
@@ -370,4 +362,49 @@ button:hover{
     .catalog{
         height: 200vh;
     }
+}
+
+.enter{
+    width: 430px;
+    height: 200px;
+    border:none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#search{
+    border-radius: 10px;
+    background-color: rgb(70, 112, 248);
+    height: 35px;
+    width: 100px;
+    border:none;
+    color: whitesmoke;
+}
+#search:hover{
+    cursor: pointer;
+}
+input{
+    border:0.5px solid gray;
+    border-radius: 10px;
+    width: 280px;
+    height: 35px;
+    font-size: 15px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.close-enter{
+    margin-left: 300px;
+    background-color: transparent;
+    border: 1px solid black;
+    padding-left: 1px;
+    padding-right: 1px;
 }
