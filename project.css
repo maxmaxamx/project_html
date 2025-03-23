@@ -270,7 +270,6 @@ button:hover{
 
 #reviews{
     background: linear-gradient(180deg, rgba(115,71,71,1) 5%, rgba(244,236,236,1) 100%);
-
 }
 
 #reviews h1{
@@ -327,17 +326,13 @@ button:hover{
 
 
 
-@media (max-width: 680px) {
+@media (max-width: 450px) {
     section {
         padding: 50px;
     }
 
     a {
         font-size: 16px;
-    }
-
-    .sticky {
-        flex-direction: column;
     }
 
     #more {
@@ -357,11 +352,39 @@ button:hover{
     }
 
     #products-container{
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 50% 50%;
+        gap: 15px;
     }
     .catalog{
         height: 200vh;
     }
+    .main{
+        width: 150px;
+        height: 170px;
+    }
+    .img-small{
+        width: 100px;
+        height: 100px;
+    }
+    .product-label{
+        font-size: 15px;
+    }
+    .smaller{
+        width: 100px;
+        height: 100px;
+    }
+    .container-reviews{
+        grid-template-columns: 100%;
+        gap:40px;
+    }
+    #reviews{
+        height: 2400px;
+    }
+    .sticky div{
+        font-size: 30px;
+    }
+
+    
 }
 
 .enter{
@@ -407,4 +430,10 @@ input{
     border: 1px solid black;
     padding-left: 1px;
     padding-right: 1px;
+}
+
+#modal-image{
+    width: 350px;
+    height: 350px;
+    
 }

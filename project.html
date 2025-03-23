@@ -24,15 +24,17 @@
     <div id="maindiv">
 
         <nav class="sticky">
-            <a href="#home" class="danfo">SNEAKERS</a>
-        <div>
-        <ul>
-            <li class="sec"><button onclick="showEnter()" id="enter-button" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px; background-color: transparent; border: none;">Войти</button></li>
-            <li class="sec"><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
-            <li class="sec"><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
-            <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
-        </ul>
-        </div>
+            <div>
+                <a href="#home" class="danfo">SNEAKERS</a>
+            </div>
+            <div>
+                <ul>
+                    <li class="sec"><button onclick="showEnter()" id="enter-button" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px; background-color: transparent; border: none;">Войти</button></li>
+                    <li class="sec"><a href="#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+                    <li class="sec"><a href="#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+                    <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
+                </ul>
+            </div>
         </nav>
 
     <section id="home">
@@ -148,7 +150,7 @@
                 <div class="modal-content"> 
                     <button class="close">&#x2715;</button>
                     <h2 id="modal-title">Название товара</h2>
-                    <img id="modal-image" src="" alt="Изображение товара">
+                    <img id="modal-image" src="" alt="Изображение товара" class="smaller">
                     <p><b id="modal-price">Цена: $0</b></p>
                     <p id="modal-description">Описание товара...</p>    
                     <button id="add-to-cart" data-cart onclick="addToCart(event)">Добавить в корзину</button>
@@ -224,7 +226,7 @@
         </div>
 
         <div>
-            <div class="review">
+            <div class="review" id="last">
                 <div class="profile">
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="user" class="user-image">
                 <p class="user-name"><b>Сергей Макеев</b></p>

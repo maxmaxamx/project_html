@@ -105,7 +105,7 @@ function updateCartDisplay() {
                     <button class="delete-btn" onclick="removeFromCart(${product.id})">&#x2715;</button>
                 </div>
                 <div class="image">
-                    <img src="${product.image}" alt="${product.title}" />
+                    <img src="${product.image}" alt="${product.title}"/>
                 </div>
                 <div class="description">
                     <span>${product.title}</span>
