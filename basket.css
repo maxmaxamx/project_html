@@ -208,3 +208,24 @@ font-variation-settings:"ELSH" 0;
     display: none;
 }
 
+@media (max-width: 450px) {
+    .sec{
+        display: none;
+    }
+    .sticky div{
+        font-size: 15px;
+    }
+    .danfo{
+        font-size: 25px;
+    }
+    #fourth{
+        margin: 0;
+    }
+    .shopping-cart{
+        width: 400px;
+    }
+    #total-price{
+        width: 400px;
+    }
+}
+
