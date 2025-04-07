@@ -1,12 +1,12 @@
 const products = [
     { id: 1, title: "Air-Force 1", price: 100, description: "Элегантные кроссовки для повседневной носки.", image: "https://images.footlocker.com/is/image/FLEU/315345397202?wid=620&hei=620&fmt=png-alpha"  },
-    { id: 2, title: "Air-Jordan 11", price: 200, description: "Спортивные кроссовки для бега.", image: "https://images.footlocker.com/is/image/FLEU/316702763604?wid=620&hei=620&fmt=png-alpha" },
+    { id: 2, title: "Air-Jordan 6", price: 200, description: "Спортивные кроссовки для бега.", image: "https://cdn-img.poizonapp.com/pro-img/cut-img/20231208/c2da9051e439457fa0d424787647e979.jpg?x-oss-process=image/format,webp/resize,w_800" },
     { id: 3, title: "Vans", price: 150, description: "Кроссовки для скейтбординга.", image: "https://cdn.sneakerbaron.nl/uploads/2020/06/24160429/vans-sk8-hi-cap-black-vn0a3wm16bt.png" },
     { id: 4, title: "Air-Jordan", price: 300, description: "Баскетбольные кроссовки", image: "https://cdn-img.poizonapp.com/pro-img/cut-img/20231106/74d09d95ce6340a4b73c84a537395002.jpg?x-oss-process=image/format,webp/resize,w_800" },
     { id: 5, title: "New Balance", price: 130, description: "Повседневные кроссовки", image:"https://cdn-img.poizonapp.com/pro-img/cut-img/20240603/5349c0f144e142e6b4f7c71047fcfc09.jpg?x-oss-process=image/format,webp/resize,w_800"},
     { id: 6, title: "Adidas Originals", price: 250, description: "Фирменное качество", image:"https://cdn-img.poizonapp.com/pro-img/cut-img/20240718/e72e67c253a243c4a06598ff1c6c3bc2.jpg?x-oss-process=image/format,webp/resize,w_800"},
     { id: 7, title: "Puma suedede xl", price: 350, description: "Новый силуэт", image:"https://cdn-img.poizonapp.com/pro-img/cut-img/20240413/8b4af5994156473aad32150547e2980c.jpg?x-oss-process=image/format,webp/resize,w_800"},
-    { id: 8, title: "Jordan 5 retro", price: 325, description: "Отличные баскетбольные кроссовки", image:"https://cdn-img.poizonapp.com/pro-img/cut-img/20240412/692eb1db69a84a13a5f15d3155933597.jpg?x-oss-process=image/format,webp/resize,w_800"},
+    { id: 8, title: "Jordan 5 retro", price: 325, description: "Баскетбольные кроссовки", image:"https://cdn-img.poizonapp.com/pro-img/cut-img/20240412/692eb1db69a84a13a5f15d3155933597.jpg?x-oss-process=image/format,webp/resize,w_800"},
 
 ];
 
@@ -27,7 +27,7 @@ const buttons = document.querySelectorAll(".view-details");
 // Открытие модального окна
 function show(event){
     const productCard = event.target.closest('.product-card');
-    if (!productCard) return;
+    if (!productCard) console.log('err');
 
     const productId = productCard.dataset.id;
     const product = products.find(p => p.id == productId);
@@ -105,7 +105,7 @@ function updateCartDisplay() {
                     <button class="delete-btn" onclick="removeFromCart(${product.id})">&#x2715;</button>
                 </div>
                 <div class="image">
-                    <img src="${product.image}" alt="${product.title}"/>
+                    <img src="${product.image}" alt="${product.title}" />
                 </div>
                 <div class="description">
                     <span>${product.title}</span>
@@ -253,3 +253,68 @@ document.addEventListener('click', (event) => {
         closeEnter();
     }
 });
+
+function displayProducts(productsArray) {
+    const productsContainer = document.getElementById('products-container');
+    productsContainer.innerHTML = ''; // Очищаем контейнер
+
+    productsArray.forEach(product => {
+        const button = document.createElement('button');
+        button.classList.add('view-details');
+        
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        productCard.dataset.id = product.id;
+
+        const productImage = document.createElement('img');
+        productImage.src = product.image;
+        productImage.alt = product.title;
+        productImage.classList.add('img-small');
+
+        const productTitle = document.createElement('h3');
+        productTitle.textContent = product.title;
+
+        const productPrice = document.createElement('p');
+        productPrice.textContent = `Цена: $${product.price}`;
+
+        const productDescription = document.createElement('p');
+        productDescription.textContent = product.description;
+        productDescription.classList.add('hidden');
+
+        const mod = document.createElement('div');
+        mod.innerHTML = `<div id="modal" class="modal hidden">
+        <div class="modal-content"> 
+            <button class="close">&#x2715;</button>
+            <h2 id="modal-title">Название товара</h2>
+            <img id="modal-image" src="" alt="Изображение товара">
+            <p><b id="modal-price">Цена: $0</b></p>
+            <p id="modal-description">Описание товара...</p>    
+            <button id="add-to-cart" data-cart onclick="addToCart(event)">Добавить в корзину</button>
+        </div>
+    </div>`
+
+        productCard.appendChild(button);
+        button.appendChild(productImage);
+        productCard.appendChild(productTitle);
+        productCard.appendChild(productPrice);
+        productCard.appendChild(productDescription);
+        productCard.appendChild(mod);
+
+        productsContainer.appendChild(productCard);
+        button.addEventListener('click', show);
+        
+    });
+}
+
+function sortByPriceAscending() {
+    products.sort((a, b) => a.price - b.price);
+    displayProducts(products);
+}
+
+function sortByPriceDescending() {
+    products.sort((a, b) => b.price - a.price);
+    displayProducts(products);
+}
+
+// Изначальное отображение товаров
+displayProducts(products);

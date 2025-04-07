@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - SNEAKERS</title>
+    <link rel="stylesheet" href="enterform.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
+    <!-- Ruslan Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&family=Slackey&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="sticky">
+        <div>
+            <a href="index.html#home" class="danfo title">SNEAKERS</a>
+        </div>
+        <div>
+            <ul>
+                <li class="sec"><button  id="enter-button" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px; background-color: transparent; border: none;">Войти</button></li>
+                <li class="sec"><a href="index.html#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+                <li class="sec"><a href="index.html#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+                <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="mainsearch" class="main">
+        <h2>Войти</h2>
+        <form id="loginForm" class="form">
+            <input type="text" id="username" placeholder="Имя пользователя" class="mar" required>
+            <input type="password" id="password" placeholder="Пароль" class="mar" required>
+            <button type="submit" id="search" class="but">Войти</button>
+        </form>
+        <p>Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+    </div>
+
+    <div id="registerForm" class="main hidden">
+        <h2>Регистрация</h2>
+        <form id="registerFormInner" class="form">
+            <input type="text" id="newUsername" placeholder="Имя пользователя" class="mar" required>
+            <input type="password" id="newPassword" placeholder="Пароль" class="mar" required>
+            <button type="submit" id="registerButton" class="but">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+    </div>
+    <div id="out">
+        
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const result = await login(username, password);
+            if (result.token) {
+                alert('Вход выполнен успешно!');
+                window.location.href = 'index.html';
+            } else {
+                alert('Ошибка входа: ' + result.error);
+            }
+        });
+
+        document.getElementById('registerFormInner').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('newUsername').value;
+            const password = document.getElementById('newPassword').value;
+            const result = await register(username, password);
+            if (result.message) {
+                alert('Регистрация успешна! Теперь вы можете войти.');
+                document.getElementById('registerForm').classList.add('hidden');
+                document.getElementById('mainsearch').classList.remove('hidden');
+            } else {
+                alert('Ошибка регистрации: ' + result.error);
+            }
+        });
+
+        document.getElementById('showRegister').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('mainsearch').classList.add('hidden');
+            document.getElementById('registerForm').classList.remove('hidden');
+        });
+
+        document.getElementById('showLogin').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('mainsearch').classList.remove('hidden');
+        });
+    </script>
+
+    <script src="project.js"></script>
+
+    <script src="enterform.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- danfo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Londrina+Sketch&display=swap" rel="stylesheet">
+
+    <!-- Ruslan Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&family=Slackey&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="katalog.css">
+    
+</head>
+<body>
+    <nav class="sticky">
+        <a href="index.html" class="danfo">SNEAKERS</a>
+    <div>
+    <ul>
+        <li class="sec"><button onclick="showEnter()" id="enter-button" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px; background-color: transparent; border: none;">Войти</button></li>
+        <li class="sec"><a href="index.html.html#catalog" id="third" class="ruslan-display-regular" style="font-size: 30px; margin-top: 10px;">Каталог</a></li>
+        <li class="sec"><a href="index.html.html#reviews" id="second" class="ruslan-display-regular" style="font-size: 30px;">Отзывы</a></li>
+        <li><a href="basket.html" id="fourth" class="ruslan-display-regular" style="font-size: 30px;">Корзина</a></li>
+    </ul>
+    </div>
+    </nav>
+<div id="grand">
+    <div class="filter">
+        <p>сортировка</p>
+        <button onclick="sortByPriceAscending()">Сортировать по возрастанию цены</button>
+        <button onclick="sortByPriceDescending()">Сортировать по убыванию цены</button>
+    </div>
+    <div class="origin">
+        <div id="products-container">
+            <div class="main">
+                <div class="product-card" data-id="1">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20230721/f1213edb65e24a37b39eeeb1b3f7420f.jpg?x-oss-process=image/format,webp/resize,w_800" alt="air-force high" class="img-small">
+                    </button>
+                </div>
+                <label for="#productone" class="product-label title"><b>Air-force 1</b></label>
+                <label for="#productone" class="product-label price"><b>100</b></label>
+                <p class="description hidden">Элегантные кроссовки для повседневной носки.</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="2">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20231208/c2da9051e439457fa0d424787647e979.jpg?x-oss-process=image/format,webp/resize,w_800" alt="jordans" class="img-small">
+                    </button>
+                </div>
+                <label for="#producttwo" class="product-label title"><b>Air-Jordan 6</b></label>
+                <label for="#producttwo" class="product-label price"><b>200</b></label>
+                <p class="description hidden">Спортивные кроссовки для бега.</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="3">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn.sneakerbaron.nl/uploads/2020/06/24160429/vans-sk8-hi-cap-black-vn0a3wm16bt.png" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Vans Sk8-Hi</b></label>
+                <label for="#productthree" class="product-label price"><b>150</b></label>
+                <p class="description hidden">Кроссовки для скейтбординга.</p>
+            </div>
+
+
+
+            <div class="main">
+                <div  class="product-card" data-id="4">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20231106/74d09d95ce6340a4b73c84a537395002.jpg?x-oss-process=image/format,webp/resize,w_800" alt="air-force high" class="img-small">
+                    </button>
+                </div>
+                <label for="#productone" class="product-label title"><b>Air Jordan 11</b></label>
+                <label for="#productone" class="product-label price"><b>300</b></label>
+                <p class="description hidden">Баскетбольные кроссовки</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="5">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240603/5349c0f144e142e6b4f7c71047fcfc09.jpg?x-oss-process=image/format,webp/resize,w_800" alt="jordans" class="img-small">
+                    </button>
+                </div>
+                <label for="#producttwo" class="product-label title"><b>New Balance</b></label>
+                <label for="#producttwo" class="product-label price" ><b>130</b></label>
+                <p class="description hidden">Повседневные кроссовки</p>
+            </div>
+    
+            <div class="main">
+                <div  class="product-card" data-id="6">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240718/e72e67c253a243c4a06598ff1c6c3bc2.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Adidas originals</b></label>
+                <label for="#productthree" class="product-label price"><b>250</b></label>
+                <p class="description hidden">Фирменное качество</p>
+            </div>
+
+            <div class="main">
+                <div  class="product-card" data-id="7">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240413/8b4af5994156473aad32150547e2980c.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Puma suede xl</b></label>
+                <label for="#productthree" class="product-label price"><b>350</b></label>
+                <p class="description hidden">Фирменное качество</p>
+            </div>
+
+            <div class="main">
+                <div  class="product-card" data-id="8">
+                    <button class="view-details" onclick="show(event)">
+                        <img src="https://cdn-img.poizonapp.com/pro-img/cut-img/20240412/692eb1db69a84a13a5f15d3155933597.jpg?x-oss-process=image/format,webp/resize,w_800" alt="vans" class="img-small">
+                    </button>
+                </div>
+                <label for="#productthree" class="product-label title"><b>Jordan 5 retro</b></label>
+                <label for="#productthree" class="product-label price"><b>325</b></label>
+                <p class="description hidden">Отличные баскетбольные кроссовки</p>
+            </div>
+
+            <div id="modal" class="modal hidden">
+                <div class="modal-content"> 
+                    <button class="close">&#x2715;</button>
+                    <h2 id="modal-title">Название товара</h2>
+                    <img id="modal-image" src="" alt="Изображение товара">
+                    <p><b id="modal-price">Цена: $0</b></p>
+                    <p id="modal-description">Описание товара...</p>    
+                    <button id="add-to-cart" data-cart onclick="addToCart(event)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="project.js"></script>
+</body>
+</html>
